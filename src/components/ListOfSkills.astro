@@ -1,0 +1,26 @@
+---
+const techSkills = [
+  { name: "React", favored: false },
+  { name: "Next.js", favored: false },
+  { name: "Express.js", favored: false },
+  { name: "Flask", favored: false },
+  { name: "Nginx", favored: false },
+  { name: "Rust", favored: false },
+  { name: "Docker", favored: false },
+  { name: "MongoDB", favored: false },
+  { name: "MariaDB", favored: false },
+  { name: "MySQL", favored: false },
+  { name: "PostgreSQL", favored: false },
+  { name: "DigitalOcean Droplet", favored: false },
+  { name: "Vercel", favored: false }
+]
+---
+
+<div>
+  <ul class="grid grid-cols-3 text-lg list-disc list-outside leading-7">
+    {techSkills.map((data) => {
+    if (data.favored) return <li class="font-semibold w-40">{data.name}</li>;
+    else return <li class="w-48">{data.name}</li>
+    })}
+  </ul>
+</div>

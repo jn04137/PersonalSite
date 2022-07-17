@@ -1,0 +1,55 @@
+---
+const links = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/jonathan-nguyen04137/",
+    newtab: true
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/wthunder45",
+    newtab: true
+  },
+  {
+    name: "Github",
+    link: "https://github.com/jn04137",
+    newtab: true
+  },
+  {
+    name: "Projects",
+    link: "https://github.com/jn04137?tab=repositories",
+    newtab: true
+  },
+  {
+    name: "About Me",
+    link: "/aboutme",
+    newtab: false
+  },
+  {
+    name: "Experiences",
+    link: "/experiences",
+    newtab: false
+  }
+]
+---
+
+<div
+  class="flex flex-wrap justify-center shadow-xl space-x-4 rounded-xl border border-stone-300 bg-[#e5ebe9] px-4 py-4">
+  {
+  links.map((data)=> {
+  if(data.newtab) {
+  return(
+  <a href={data.link} target="_blank" class="hover:underline hover:underline-offset-2">
+    {data.name}
+  </a>
+  )
+  } else {
+  return(
+  <a href={data.link} class="hover:underline hover:underline-offset-2">
+    {data.name}
+  </a>
+  )
+  }
+  })
+  }
+</div>
