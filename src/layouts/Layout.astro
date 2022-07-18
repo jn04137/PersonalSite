@@ -15,37 +15,8 @@ const { title } = Astro.props as Props;
 	<title>{title}</title>
 </head>
 
-<body class="background">
+<body class="">
 	<slot />
 </body>
 
 </html>
-<style>
-	.background {
-		background-color: #e5ebe9;
-		opacity: 0.5;
-		background-image: radial-gradient(#000000 1.75px, transparent 1.75px), radial-gradient(#000000 1.75px, #e5ebe9 1.75px);
-		background-size: 70px 70px;
-		background-position: 0 0, 35px 35px;
-		animation: slide 15s linear infinite;
-		overscroll-behavior: contain;
-	}
-
-	@keyframes slide {
-		0% {
-			opacity: 1;
-		}
-
-		100% {
-			opacity: 1;
-		}
-
-		from {
-			background-position: 0 0;
-		}
-
-		to {
-			background-position: 0% 100%;
-		}
-	}
-</style>
