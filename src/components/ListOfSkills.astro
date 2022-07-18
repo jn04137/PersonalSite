@@ -2,6 +2,7 @@
 const techSkills = [
   { name: "React", favored: false },
   { name: "Next.js", favored: false },
+  { name: "Astro Build", favored: false },
   { name: "Express.js", favored: false },
   { name: "Flask", favored: false },
   { name: "Nginx", favored: false },
@@ -11,13 +12,14 @@ const techSkills = [
   { name: "MariaDB", favored: false },
   { name: "MySQL", favored: false },
   { name: "PostgreSQL", favored: false },
+  { name: "Redis", favored: false },
   { name: "DigitalOcean Droplet", favored: false },
   { name: "Vercel", favored: false }
 ]
 ---
 
 <div>
-  <ul class="grid grid-cols-3 text-lg list-disc list-outside leading-7">
+  <ul class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 text-lg list-disc list-outside leading-7">
     {techSkills.map((data) => {
     if (data.favored) return <li class="font-semibold w-40">{data.name}</li>;
     else return <li class="w-48">{data.name}</li>

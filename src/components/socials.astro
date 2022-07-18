@@ -39,13 +39,13 @@ const links = [
   links.map((data)=> {
   if(data.newtab) {
   return(
-  <a href={data.link} target="_blank" class="hover:underline hover:underline-offset-2">
+  <a href={data.link} target="_blank" class="text-lg md:text-md hover:underline hover:underline-offset-2">
     {data.name}
   </a>
   )
   } else {
   return(
-  <a href={data.link} class="hover:underline hover:underline-offset-2">
+  <a href={data.link} class="text-lg lg:text-md hover:underline hover:underline-offset-2">
     {data.name}
   </a>
   )

@@ -21,21 +21,6 @@ const { title } = Astro.props as Props;
 
 </html>
 <style>
-	body {
-		margin: 0;
-	}
-
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-
-	html,
-	body {
-		height: 100%;
-		overflow: hidden;
-	}
-
 	.background {
 		background-color: #e5ebe9;
 		opacity: 0.5;
@@ -45,8 +30,6 @@ const { title } = Astro.props as Props;
 		animation: slide 15s linear infinite;
 		overscroll-behavior: contain;
 	}
-
-	.nobounce {}
 
 	@keyframes slide {
 		0% {
