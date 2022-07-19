@@ -1,9 +1,9 @@
 ---
-export interface Props {
-	title: string;
-}
+	export interface Props {
+		title: string;
+	}
 
-const { title } = Astro.props as Props;
+	const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -12,7 +12,10 @@ const { title } = Astro.props as Props;
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>{title}</title>
+	<link rel="icon" href={'../../public/icons8-coffee-pot-32.png'} />
+	<title>
+		{title}
+	</title>
 </head>
 
 <body class="">
