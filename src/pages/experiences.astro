@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon';
+  import Layout from '../layouts/Layout.astro';
+  import { Icon } from 'astro-icon';
 ---
 
 <Layout title="Experiences">
-  <div class="flex flex-col justify-center background min-h-screen">
+  <div class="flex flex-col justify-center min-h-screen">
     <div class="bg-[#e5ebe9] absolute top-10 left-10 shadow-xl rounded-xl border border-stone-400 px-4 py-2">
       <a href="/" class="flex justify-center space-x-2">
         <Icon name="bi:arrow-left-circle" class="w-5" />
@@ -28,31 +28,4 @@ import { Icon } from 'astro-icon';
 </Layout>
 
 <style>
-  .background {
-    background-color: #e5ebe9;
-    opacity: 0.5;
-    background-image: radial-gradient(#000000 1.75px, transparent 1.75px), radial-gradient(#000000 1.75px, #e5ebe9 1.75px);
-    background-size: 70px 70px;
-    background-position: 0 0, 35px 35px;
-    animation: slide 15s linear infinite;
-    overscroll-behavior: contain;
-  }
-
-  @keyframes slide {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 1;
-    }
-
-    from {
-      background-position: 0 0;
-    }
-
-    to {
-      background-position: 0% 100%;
-    }
-  }
 </style>
