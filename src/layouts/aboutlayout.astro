@@ -1,0 +1,32 @@
+---
+  import Layout from '../layouts/Layout.astro';
+  import { Icon } from 'astro-icon';
+
+  const { content } = Astro.props;
+---
+
+<Layout title={content.title}>
+  <div class="flex flex-col justify-center min-h-screen py-8">
+    <div class="bg-[#e5ebe9] absolute top-10 left-10 shadow-xl rounded-xl border border-stone-400 px-4 py-2">
+      <a href="/" class="flex justify-center space-x-2">
+        <Icon name="bi:arrow-left-circle" class="w-5" />
+        <span>Go back home</span>
+      </a>
+    </div>
+    <div class="flex justify-center">
+      <div class="flex flex-col space-y-4">
+        <div class="bg-[#e5ebe9] border border-stone-400 rounded-xl shadow-xl px-10 py-6 space-y-6 prose lg:prose">
+          <h1 class="text-6xl">{content.title}</h1>
+          <p>
+            <slot />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+
+
+</style>
