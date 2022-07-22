@@ -1,31 +1,104 @@
 ---
   import Layout from '../layouts/Layout.astro';
   import { Icon } from 'astro-icon';
+
+  import { Content as FRC3998Content } from '../content/Experiences/FRC3998.md';
+  import { Content as BAContent } from '../content/Experiences/BullochAlliance.md';
+  import { Content as SCContent } from '../content/Experiences/StatesboroCardiology.md';
+  import { Content as ACMContent } from '../content/Experiences/ACMExp.md';
 ---
 
 <Layout title="Experiences">
-  <div class="flex flex-col justify-center min-h-screen">
-    <div class="bg-[#e5ebe9] absolute top-10 left-10 shadow-xl rounded-xl border border-stone-400 px-4 py-2">
+  <div class="flex flex-col h-fit justify-center py-2 px-4">
+    <div class="w-fit bg-[#e5ebe9] shadow-xl rounded-xl border border-stone-400 px-4 py-2">
       <a href="/" class="flex justify-center space-x-2">
         <Icon name="bi:arrow-left-circle" class="w-5" />
         <span>Go back home</span>
       </a>
     </div>
     <div class="flex flex-row justify-center">
-      <div class="bg-[#e5ebe9] px-6 py-2 border border-stone-400 rounded-xl shadow-xl">
-        <p class="text-2xl text-center">
-          Left for Coffee<br />
-          Will be Back Soon<br />
-        </p>
-        <p class="text-center">
-          <span style="font-size:50px">&#9749</span>
-          <span style="font-size:50px">&#9749</span>
-          <span style="font-size:50px">&#9749</span>
-        </p>
+      <div class="timeline px-6 border border-stone-400 rounded-xl shadow-xl h-fit prose">
+        <div class="outer py-2 space-y-14">
+          <div class="card">
+            <div class="">
+              <h1 class="text-5xl border-l-4 border-gray-500 text-gray-400 font-light pl-2">Work Experience</h1>
+            </div>
+            <SCContent />
+          </div>
+          <div class="card">
+            <div class="">
+              <h1 class="text-5xl border-l-4 border-gray-500 text-gray-400 font-light pl-2">Leadership Experience</h1>
+            </div>
+            <BAContent />
+            <ACMContent />
+            <FRC3998Content />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </Layout>
 
 <style>
+  .no-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scroll-ff {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  :root {
+    --primary-color: #e5ebe9;
+    --background-color: #e5ebe9;
+    --text-color: #0284c7;
+  }
+
+  body {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Timeline Container */
+  .timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  /* Outer Layer with the timeline border */
+  .outer {
+    border-left: 2px solid #333;
+  }
+
+  /* Card container */
+  .card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    background: var(--background-color);
+    color: gray;
+    border-radius: 8px;
+    max-width: 600px;
+  }
+
+  /* Title of the card */
+  .title {
+    color: var(--text-color);
+    position: relative;
+  }
+
+  /* Timeline dot  */
+  .title::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid var(--text-color);
+  }
 </style>
