@@ -13,8 +13,8 @@ This was a beginning of an FRC that would provide STEM education and outreach ev
 
 My responsibilities and accomplishments from this experience included:
 - Successfully recruited students from three+ different schools in the area
-- Taught programming principles and WPILIB api (Java)
-- Taught self-driven students in an outreach program how to setup and program Raspberry Pi's (Python)
+- Taught programming principles and WPILIB api (**Java**)
+- Taught self-driven students in an external program how to setup and program **Raspberry Pi's** (**Python**, **Linux**, **SSH**)
 - Planned multiple multi-day trips for competitions
   - Booked hotel rooms and managed how students were separated
 - Handled the team's budget with an emphasis on sustainability
